@@ -1,5 +1,5 @@
 
-resource "aws_instance" "web" {
+resource "aws_instance" "oregon" {
   provider= "aws.oregon"
   ami           = "${data.aws_ami.ubuntu.id}"
   instance_type = "t2.micro"
@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "california" {
   provider= "aws.california"
   ami           = "${data.aws_ami.ubuntu.id}"
   instance_type = "t2.micro"
@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_instance" "ohio" {
-  provider= "aws.oregon"
+  provider= "aws.ohio"
   ami           = "${data.aws_ami.ubuntu.id}"
   instance_type = "t2.micro"
 
@@ -29,7 +29,7 @@ resource "aws_instance" "ohio" {
   }
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "virginia" {
   provider= "aws.virginia"
   ami           = "${data.aws_ami.ubuntu.id}"
   instance_type = "t2.micro"
